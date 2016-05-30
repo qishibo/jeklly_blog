@@ -10,6 +10,18 @@
 <body>
     <hr />
     {{ content }}
+
+    <br>
+    <br>
+
+    <div class="comments">
+        {% if page.comments %}
+            {% include comments.ext %}
+        {% endif %}
+    </div>
+
+    <br>
+    <br>
     <footer>
         this is footer
     </footer>
