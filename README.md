@@ -1,1 +1,1 @@
-# using jeklly to init a blog
+# using jekyll to init a blog
