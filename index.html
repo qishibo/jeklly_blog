@@ -9,8 +9,8 @@ title: blog index
 
 <ul>
     {% for post in site.posts %}
-    <li>{{ post.date | date_TO_string }}
-        <a href="{{ site.baseurl }}{{ post.url }}"></a>
+    <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date_TO_string }} {{ post.title }}</a>
     </li>
     {% endfor %}
 </ul>
