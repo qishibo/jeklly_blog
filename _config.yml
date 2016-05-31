@@ -1,1 +1,4 @@
 baseurl: /jekyll_blog
+paginate: 4
+paginate_path: "page:num"
+gems: [jekyll-paginate]

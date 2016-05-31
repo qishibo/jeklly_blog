@@ -8,10 +8,24 @@ title: blog index
 <h3> new pages </h3>
 
 <ul>
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <li>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date_TO_string }} {{ post.title }}</a>
+        <p>{{ post.excerpt }}</p>
     </li>
     {% endfor %}
 </ul>
+
+<!-- total pages -->
+total pages: {{paginator.total_pages}} <br>
+
+<!--previous page-->
+{% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">上一页</a>
+{% endif %}
+
+<!-- next page -->
+{% if paginator.next_page_path %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">下一页</a>
+{% endif %}
 
